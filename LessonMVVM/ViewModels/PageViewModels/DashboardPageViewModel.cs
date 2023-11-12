@@ -15,32 +15,57 @@ namespace LessonMVVM.ViewModels.PageViewModels;
 
 public class DashboardPageViewModel : NotificationService
 {
-    public ObservableCollection<User> Users { get; set; }
+    public ObservableCollection<Car> Cars { get; set; }
 
     public ICommand? AddViewCommand { get; set; }
     public ICommand? EditViewCommand { get; set; }
+    public ICommand? RemoveCommand { get; set; }
+    public ICommand? GetAllCommand { get; set; }
 
     public DashboardPageViewModel()
     {
-        string jsonText = File.ReadAllText("..\\..\\Users.json");
-        Users = JsonConvert.DeserializeObject<ObservableCollection<User>>(jsonText);
+        string jsonText = File.ReadAllText("..\\..\\..\\DataBase\\Cars.json");
+        Cars = JsonConvert.DeserializeObject<ObservableCollection<Car>>(jsonText);
         
-        AddViewCommand = new RelayCommand(AddUserView);
-        EditViewCommand = new RelayCommand(EditUserView);
+        AddViewCommand = new RelayCommand(AddCarView);
+        EditViewCommand = new RelayCommand(EditCarView, IsComboBoxNotEmpty);
+        RemoveCommand = new RelayCommand(Remove, IsComboBoxNotEmpty);
+        GetAllCommand = new RelayCommand(GetAll);
     }
 
-    public void AddUserView(object? parameter)
+    public void AddCarView(object? parameter)
     {
-        var addView = new AddUserView();
-        addView.DataContext = new AddUserViewModel(Users);
+        var addView = new AddCarView();
+        addView.DataContext = new AddCarViewModel(Cars);
         addView.ShowDialog();
     }
 
-    public void EditUserView(object? parameter) 
+    public void EditCarView(object? parameter) 
     {
         int index = Convert.ToInt32(parameter);
-        var editView = new EditUserView();
-        editView.DataContext = new EditUserViewModel(Users, index);
+        var editView = new EditCarView();
+        editView.DataContext = new EditCarViewModel(Cars, index);
         editView.ShowDialog();
+    }
+
+    public void Remove(object? parameter)
+    {
+        int index = Convert.ToInt32(parameter);
+        Cars.Remove(Cars[index]).ToString();
+        string json = JsonConvert.SerializeObject(Cars);
+        File.WriteAllText("..\\..\\..\\DataBase\\Cars.json", json);
+    }
+
+    public void GetAll(object? parameter)
+    {
+        var addView = new GetAllView();
+        addView.DataContext = new GetAllViewModel(Cars);
+        addView.ShowDialog();
+    }
+
+    public static bool IsComboBoxNotEmpty(object? parameter)
+    {
+        int index = Convert.ToInt32(parameter);
+        return (index != -1);
     }
 }

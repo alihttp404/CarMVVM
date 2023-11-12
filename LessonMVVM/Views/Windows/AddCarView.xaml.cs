@@ -3,9 +3,9 @@
 namespace LessonMVVM.Views.Windows;
 
 
-public partial class AddUserView : Window
+public partial class AddCarView : Window
 {
-    public AddUserView()
+    public AddCarView()
     {
         InitializeComponent();
     }

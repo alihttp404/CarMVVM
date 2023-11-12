@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace LessonMVVM.Views.Windows
 {
     /// <summary>
-    /// Interaction logic for EditUserView.xaml
+    /// Interaction logic for EditCarView.xaml
     /// </summary>
-    public partial class EditUserView : Window
+    public partial class EditCarView : Window
     {
-        public EditUserView()
+        public EditCarView()
         {
             InitializeComponent();
         }

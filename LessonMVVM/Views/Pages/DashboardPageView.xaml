@@ -15,11 +15,11 @@
             
             <ComboBox
                 Name="cmb"
-                ItemsSource="{Binding Users}"
+                ItemsSource="{Binding Cars}"
                 Margin="10"
                 FontSize="18"
-                materialDesign:HintAssist.Hint="Select User"
-                DisplayMemberPath="Name"/>
+                materialDesign:HintAssist.Hint="Select Car"
+                DisplayMemberPath="MakeAndModel"/>
             
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
                 
@@ -31,8 +31,14 @@
                     CommandParameter="{Binding ElementName=cmb, Path=SelectedIndex}"
                     Content="Edit" Width="100" Margin="10"/>
                 
-                <Button Content="Remove" Width="100" Margin="10"/>
-                <Button Content="Get All" Width="100" Margin="10"/>
+                <Button
+                    Command="{Binding RemoveCommand}"
+                    CommandParameter="{Binding ElementName=cmb, Path=SelectedIndex}"
+                    Content="Remove" Width="100" Margin="10"/>
+                
+                <Button
+                    Command="{Binding GetAllCommand}"
+                    Content="Get All" Width="100" Margin="10"/>
             </StackPanel>
         </StackPanel>
     </Grid>

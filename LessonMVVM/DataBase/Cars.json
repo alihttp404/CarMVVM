@@ -1,0 +1,132 @@
+[
+  {
+    "Make": "Dodge",
+    "MakeAndModel": "Dodge Durango",
+    "Model": "Durango"
+  },
+  {
+    "Make": "Mercedes-Benz",
+    "Model": "500SEL",
+    "MakeAndModel": "Mercedes-Benz 500SEL"
+  },
+  {
+    "Make": "Chevrolet",
+    "Model": "Caprice",
+    "MakeAndModel": "Chevrolet Caprice"
+  },
+  {
+    "Make": "Acura",
+    "Model": "Legend",
+    "MakeAndModel": "Acura Legend"
+  },
+  {
+    "Make": "Jeep",
+    "Model": "Compass",
+    "MakeAndModel": "Jeep Compass"
+  },
+  {
+    "Make": "Ford",
+    "Model": "Econoline E250",
+    "MakeAndModel": "Ford Econoline E250"
+  },
+  {
+    "Make": "Volkswagen",
+    "Model": "Corrado",
+    "MakeAndModel": "Volkswagen Corrado"
+  },
+  {
+    "Make": "Mazda",
+    "Model": "Tribute",
+    "MakeAndModel": "Mazda Tribute"
+  },
+  {
+    "Make": "Buick",
+    "Model": "Lucerne",
+    "MakeAndModel": "Buick Lucerne"
+  },
+  {
+    "Make": "Lexus",
+    "Model": "LX",
+    "MakeAndModel": "Lexus LX"
+  },
+  {
+    "Make": "Pontiac",
+    "Model": "Firebird",
+    "MakeAndModel": "Pontiac Firebird"
+  },
+  {
+    "Make": "Scion",
+    "Model": "xD",
+    "MakeAndModel": "Scion xD"
+  },
+  {
+    "Make": "Infiniti",
+    "Model": "QX",
+    "MakeAndModel": "Infiniti QX"
+  },
+  {
+    "Make": "Hummer",
+    "Model": "H1",
+    "MakeAndModel": "Hummer H1"
+  },
+  {
+    "Make": "Infiniti",
+    "Model": "QX56",
+    "MakeAndModel": "Infiniti QX56"
+  },
+  {
+    "Make": "Buick",
+    "Model": "Riviera",
+    "MakeAndModel": "Buick Riviera"
+  },
+  {
+    "Make": "Ford",
+    "Model": "F250",
+    "MakeAndModel": "Ford F250"
+  },
+  {
+    "Make": "Honda",
+    "Model": "Civic",
+    "MakeAndModel": "Honda Civic"
+  },
+  {
+    "Make": "Mitsubishi",
+    "Model": "Montero Sport",
+    "MakeAndModel": "Mitsubishi Montero Sport"
+  },
+  {
+    "Make": "Honda",
+    "Model": "Odyssey",
+    "MakeAndModel": "Honda Odyssey"
+  },
+  {
+    "Make": "Honda",
+    "Model": "Civic",
+    "MakeAndModel": "Honda Civic"
+  },
+  {
+    "Make": "Honda",
+    "Model": "Fit",
+    "MakeAndModel": "Honda Fit"
+  },
+  {
+    "Make": "Land Rover",
+    "Model": "Range Rover",
+    "MakeAndModel": "Land Rover Range Rover"
+  },
+  {
+    "Make": "Nissan",
+    "Model": "Maxima",
+    "MakeAndModel": "Nissan Maxima"
+  },
+  {
+    "Make": "Lifan",
+    "Model": "NAZ",
+    "MakeAndModel": "Lifan NAZ"
+  },
+  {
+    "Make": "Lexus",
+    "Model": "LX",
+    "MakeAndModel": "Lexus LX"
+  }
+]

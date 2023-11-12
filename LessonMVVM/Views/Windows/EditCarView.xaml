@@ -1,0 +1,49 @@
+﻿<Window x:Class="LessonMVVM.Views.Windows.EditCarView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LessonMVVM.Views.Windows"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        mc:Ignorable="d"
+        Title="AddCarView" Height="300" Width="650">
+    <Grid >
+        <StackPanel
+            HorizontalAlignment="Center" 
+            VerticalAlignment="Center" >
+
+            <StackPanel Orientation="Horizontal" Margin="10 20">
+                <Label Width="90" Content="Make" FontSize="18" HorizontalAlignment="Left"/>
+                <TextBox 
+                    Text="{Binding CurrCar.Make, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    materialDesign:HintAssist.Hint="Enter Make"
+                    HorizontalContentAlignment="Right"
+                    FontSize="18" 
+                    Width="385"/>
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal" Margin="10 20">
+                <Label Width="90" Content="Model" FontSize="18"/>
+                <TextBox 
+                    Text="{Binding CurrCar.Model, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    materialDesign:HintAssist.Hint="Enter Model"
+                    HorizontalContentAlignment="Right"
+                    FontSize="18" 
+                    Width="385"/>
+            </StackPanel>
+
+
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+                <Button
+                    Command="{Binding SaveCommand}"
+                    Content="Save" Width="100" Margin="10"/>
+
+                <Button
+                    Command="{Binding CancelCommand}"
+                    CommandParameter="{Binding RelativeSource={RelativeSource
+                    FindAncestor, AncestorType={x:Type Window}}}"
+                    Content="Cancel" Width="100" Margin="10"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
